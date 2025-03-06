@@ -6,9 +6,8 @@
     <title>YouTube Klonu</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md p-4 flex items-center justify-between">
+<body class="bg-gray-100 relative overflow-hidden">
+    <nav class="bg-white shadow-md p-4 flex items-center justify-between position-fixed w-full z-10 top-0">
         <div class="flex items-center space-x-4">
             <button id="menu-btn" class="p-2 hover:bg-gray-200 rounded"><img src="https://www.svgrepo.com/show/509382/menu.svg" width="30" alt="Menu"></button>
             <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube" class="h-6">
@@ -36,20 +35,7 @@
             </ul>
         </aside>
         
-        <!-- Video Grid -->
-        <main class="flex-1 p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-auto h-full">
-            <div class="bg-white rounded-lg shadow p-4">
-                <img src="video-thumbnail.jpg" alt="Video" class="w-full rounded-lg">
-                <div class="flex mt-2 space-x-2">
-                    <img src="channel-logo.jpg" alt="Channel" class="h-10 w-10 rounded-full">
-                    <div>
-                        <h3 class="font-bold">Video Başlığı</h3>
-                        <p class="text-gray-600 text-sm">Kanal Adı</p>
-                        <p class="text-gray-500 text-xs">500K baxış • 2 gün əvvəl</p>
-                    </div>
-                </div>
-            </div>
-        </main>
+        <main class="flex-1 p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-auto pt-10 mb-20"></main>
     </div>
 
     <script>
@@ -77,5 +63,7 @@
             });
         });
     </script>
+
+    <script src="main.js"></script>
 </body>
 </html>
