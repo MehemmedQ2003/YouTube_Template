@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Klonu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+            <button id="menu-btn" class="p-2 hover:bg-gray-200 rounded"><img src="https://www.svgrepo.com/show/509382/menu.svg" width="30" alt="Menu"></button>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube" class="h-6">
+        </div>
+        <div class="flex-grow mx-4">
+            <input type="text" placeholder="Axtar..." class="w-full p-2 border rounded-lg">
+        </div>
+        <div class="flex space-x-4 align-center">
+            <button class="p-2 hover:bg-gray-200 rounded">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiQvjedNLCq0sjYlGRxeBHf_nA0kTWY3pl3g&s" width="30"  alt="Upload">
+            </button>
+            <button class="p-2 hover:bg-gray-200 rounded">
+                <img src="https://banner2.cleanpng.com/20180519/oa/avq2scbbe.webp" width="30" alt="Notifications">
+            </button>
+            <img src="https://cdn-icons-png.flaticon.com/512/6522/6522516.png" alt="Profile" class="h-8 w-8 rounded-full">
+        </div>
+    </nav>
+    
+    <div class="flex h-screen">
+        <aside id="sidebar" class="w-64 bg-white p-4 h-full shadow-md hidden md:block">
+            <ul class="space-y-4">
+                <li class="flex items-center space-x-3 hover:bg-gray-200 p-2 rounded"><img src="https://www.svgrepo.com/show/22031/home-icon-silhouette.svg" alt="Home" class="h-6"> <span>Ana səhifə</span></li>
+                <li class="flex items-center space-x-3 hover:bg-gray-200 p-2 rounded"><img src="https://cdn-icons-png.flaticon.com/512/565/565285.png" alt="Subscriptions" class="h-6"> <span>Abunəliklər</span></li>
+                <li class="flex items-center space-x-3 hover:bg-gray-200 p-2 rounded"><img src="https://cdn-icons-png.flaticon.com/512/225/225993.png" alt="Library" class="h-6"> <span>Kitabxana</span></li>
+            </ul>
+        </aside>
+        
+        <!-- Video Grid -->
+        <main class="flex-1 p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-auto h-full">
+            <div class="bg-white rounded-lg shadow p-4">
+                <img src="video-thumbnail.jpg" alt="Video" class="w-full rounded-lg">
+                <div class="flex mt-2 space-x-2">
+                    <img src="channel-logo.jpg" alt="Channel" class="h-10 w-10 rounded-full">
+                    <div>
+                        <h3 class="font-bold">Video Başlığı</h3>
+                        <p class="text-gray-600 text-sm">Kanal Adı</p>
+                        <p class="text-gray-500 text-xs">500K baxış • 2 gün əvvəl</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let sidebar = document.getElementById("sidebar");
+            let menuBtn = document.getElementById("menu-btn");
+            let sidebarState = localStorage.getItem("sidebarState");
+            
+            if (sidebarState === "open") {
+                sidebar.classList.add("md:w-64", "w-full");
+            } else {
+                sidebar.classList.add("w-0", "overflow-hidden");
+            }
+
+            menuBtn.addEventListener("click", function() {
+                if (sidebar.classList.contains("w-0")) {
+                    sidebar.classList.remove("w-0", "overflow-hidden");
+                    sidebar.classList.add("md:w-64", "w-full");
+                    localStorage.setItem("sidebarState", "open");
+                } else {
+                    sidebar.classList.remove("md:w-64", "w-full");
+                    sidebar.classList.add("w-0", "overflow-hidden");
+                    localStorage.setItem("sidebarState", "closed");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
