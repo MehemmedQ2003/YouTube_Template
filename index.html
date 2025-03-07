@@ -10,18 +10,14 @@
     <nav class="bg-white shadow-md p-4 flex items-center justify-between position-fixed w-full z-10 top-0">
         <div class="flex items-center space-x-4">
             <button id="menu-btn" class="p-2 hover:bg-gray-200 rounded"><img src="https://www.svgrepo.com/show/509382/menu.svg" width="30" alt="Menu"></button>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube" class="h-6">
+            <a href="index.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube" class="w-10">
+            </a>
         </div>
-        <div class="flex-grow mx-4">
-            <input type="text" placeholder="Axtar..." class="w-full p-2 border rounded-lg">
+        <div class="flex mx-4 justify-end w-full">
+            <input type="text" placeholder="Axtar..." class="w-96 p-2 px-5 border rounded-lg">
         </div>
         <div class="flex space-x-4 align-center">
-            <button class="p-2 hover:bg-gray-200 rounded">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiQvjedNLCq0sjYlGRxeBHf_nA0kTWY3pl3g&s" width="30"  alt="Upload">
-            </button>
-            <button class="p-2 hover:bg-gray-200 rounded">
-                <img src="https://banner2.cleanpng.com/20180519/oa/avq2scbbe.webp" width="30" alt="Notifications">
-            </button>
             <img src="https://cdn-icons-png.flaticon.com/512/6522/6522516.png" alt="Profile" class="h-8 w-8 rounded-full">
         </div>
     </nav>
@@ -29,9 +25,30 @@
     <div class="flex h-screen">
         <aside id="sidebar" class="w-64 bg-white p-4 h-full shadow-md hidden md:block">
             <ul class="space-y-4">
-                <li class="flex items-center space-x-3 hover:bg-gray-200 p-2 rounded"><img src="https://www.svgrepo.com/show/22031/home-icon-silhouette.svg" alt="Home" class="h-6"> <span>Ana səhifə</span></li>
-                <li class="flex items-center space-x-3 hover:bg-gray-200 p-2 rounded"><img src="https://cdn-icons-png.flaticon.com/512/565/565285.png" alt="Subscriptions" class="h-6"> <span>Abunəliklər</span></li>
-                <li class="flex items-center space-x-3 hover:bg-gray-200 p-2 rounded"><img src="https://cdn-icons-png.flaticon.com/512/225/225993.png" alt="Library" class="h-6"> <span>Kitabxana</span></li>
+                <li class="flex items-center space-x-3 hover:bg-gray-200 p-2 rounded">
+                    <a href="index.html" class="flex items-center space-x-3 hover:bg-gray-200 p-2 rounded">
+                        <img src="https://www.svgrepo.com/show/22031/home-icon-silhouette.svg" alt="Home" class="h-6">
+                        <span>
+                            Ana səhifə
+                        </span>
+                    </a>
+                </li>
+                <li class="flex items-center space-x-3 hover:bg-gray-200 p-2 rounded">
+                    <a href="" class="flex items-center space-x-3 hover:bg-gray-200 p-2 rounded">
+                        <img src="https://cdn-icons-png.flaticon.com/512/565/565285.png" alt="Subscriptions" class="h-6">
+                        <span>
+                            Abunəliklər
+                        </span>
+                    </a>
+                </li>
+                <li class="flex items-center space-x-3 hover:bg-gray-200 p-2 rounded">
+                    <a href="" class="flex items-center space-x-3 hover:bg-gray-200 p-2 rounded">
+                        <img src="https://cdn-icons-png.flaticon.com/512/225/225993.png" alt="Library" class="h-6">
+                        <span>
+                            Kitabxana
+                        </span>
+                    </a>
+                </li>
             </ul>
         </aside>
         
